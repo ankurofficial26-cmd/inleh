@@ -103,6 +103,8 @@ body {
 
 .product {
     width: 240px;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 20px;
     border-radius: 15px;
     background: rgba(255,255,255,0.05);
@@ -234,6 +236,106 @@ footer {
     padding: 20px;
     background: black;
 }
+/* ==========================
+   MOBILE RESPONSIVE DESIGN
+========================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+    }
+
+    /* Hero */
+    .hero {
+        height: 80vh;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* Products */
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    /* Usage Cards */
+    .usage-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .usage-card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    /* Marketplace Logos */
+    .marketplace-logos {
+        gap: 20px;
+    }
+
+    .marketplace-logos img {
+        height: 35px;
+    }
+
+    /* Sections */
+    .section {
+        padding: 50px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    /* WhatsApp Button */
+    .float {
+        bottom: 15px;
+        right: 15px;
+        font-size: 20px;
+        padding: 12px;
+    }
+}
 </style>
 </head>
 
@@ -243,22 +345,22 @@ footer {
 <div class="navbar">
     <div class="logo">
         <img src="images/logo.jpg">
-        <div>
-            <div class="tagline">Nature In Every Space</div>
-        </div>
+        <!-- <div> -->
+            <!-- <div class="tagline">Nature In Every Space</div> -->
+        <!-- </div> -->
     </div>
 
     <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#products">Fragrances</a>
-        <a href="#contact">Contact</a>
+		<a href="#" class="active">Home</a>
+		<a href="#products">Fragrances</a>
+		<a href="#contact">Contact</a>
     </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
     <div class="hero-box">
-       <h1>Inspired By Leh. Crafted For Every Space.</h1>
+       <h1>Inspired By Leh.<br>Crafted For Every Space.</h1>
 		<p>
 		Premium fragrance pouches for cars, wardrobes, drawers, bathrooms and everyday spaces.
 		</p>
@@ -276,7 +378,10 @@ footer {
             <img src="images/sample12.jpeg">
             <h3>Coffee</h3>
             <p>Warm & rich aroma</p>
-            <div class="price">₹160</div>
+            <div class="price">
+				<span class="old-price">₹399</span>
+				<span class="new-price">₹220</span>
+			</div>
             <a href="https://wa.me/918383057543?text=Coffee%20Fragrance" class="btn">Buy</a>
         </div>
 

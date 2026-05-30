@@ -53,7 +53,8 @@ body {
 
 /* HERO */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 60px 20px;
     background:
     linear-gradient(
         rgba(0,0,0,0.55),
@@ -97,10 +98,11 @@ body {
 
 /* PRODUCTS */
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .product {
@@ -220,11 +222,11 @@ body {
 /* USAGE SECTION */
 
 .usage-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
-    margin-top: 30px;
+    max-width: 1200px;
+    margin: 30px auto 0;
 }
 
 .usage-card {
@@ -251,18 +253,18 @@ footer {
     .navbar {
         flex-direction: column;
         padding: 15px;
-        gap: 15px;
+        gap: 10px;
     }
 
     .nav-links {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
+         display: flex;
         justify-content: center;
+        gap: 15px;
+        width: 100%;
     }
 
     .nav-links a {
-        margin-left: 0;
+        font-size: 14px;
     }
 
     /* Hero */
@@ -358,6 +360,10 @@ footer {
         font-size: 20px;
         padding: 12px;
     }
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
 </style>
 </head>

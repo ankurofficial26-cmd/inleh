@@ -34,7 +34,9 @@ body {
     gap: 10px;
 }
 
-.logo img { width: 45px; }
+.logo img {
+    width: 100px;
+}
 
 .tagline {
     font-size: 12px;
@@ -111,10 +113,12 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.1);
     transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(255,215,0,0.08);
 }
 
 .product:hover {
-    transform: translateY(-10px);
+   transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255,215,0,0.2);
 }
 
 .product img {
@@ -130,8 +134,9 @@ body {
     text-decoration: line-through;
     color: #999;
     font-size: 16px;
-    margin
+    margin-right: 8px;
 }
+
 /* STORY */
 .story {
     max-width: 700px;
@@ -276,9 +281,21 @@ footer {
     }
 
     .hero-box {
+        animation: fadeUp 1.5s ease;
         width: 90%;
         padding: 20px;
     }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
     /* Products */
     .products {
@@ -320,9 +337,15 @@ footer {
         font-size: 32px;
     }
 
-    h2 {
-        font-size: 26px;
-    }
+  h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: gold;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
 
     p {
         font-size: 15px;
@@ -440,6 +463,20 @@ footer {
             <h3>🚗 Perfect For Cars</h3>
             <p>Premium scents created for everyday drives.</p>
         </div>
+        <div class="product">
+            <h3>1000+</h3>
+            <p>Happy Customers</p>
+        </div>
+
+        <div class="product">
+            <h3>4 Premium Scents</h3>
+            <p>Inspired by Nature</p>
+        </div>
+
+        <div class="product">
+            <h3>30+ Days</h3>
+            <p>Long Lasting Fragrance</p>
+        </div>
 
     </div>
 
@@ -501,6 +538,13 @@ footer {
 <section class="section" id="contact">
     <h2>Contact Us</h2>
     <p>📞 8383057543</p>
+<p>
+        ✉️
+        <a href="mailto:inlehgroup@gmail.com"
+           style="color:gold;text-decoration:none;">
+           inlehgroup@gmail.com
+        </a>
+    </p>
 </section>
 <section class="section">
 
@@ -513,6 +557,7 @@ Whether it's your car, wardrobe, bathroom or workspace, inLeh brings lasting fre
 </section>
 <footer>
     <p>© 2026 inLeh Fragrances</p>
+    <p>Inspired by Leh • Crafted for Every Space</p>
 </footer>
 
 <a href="https://wa.me/918383057543" class="float">💬</a>
